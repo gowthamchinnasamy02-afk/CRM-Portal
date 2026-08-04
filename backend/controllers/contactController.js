@@ -3,7 +3,7 @@ const Customer = require('../models/Customer');
 const { logAuditEvent } = require('../middleware/audit');
 
 
-exports.getContactByCustomer = async (req, res, next) => {
+exports.getContactsByCustomer = async (req, res, next) => {
     try {
         const contacts = await Contact.find({
             customerId: req.params.customerId,

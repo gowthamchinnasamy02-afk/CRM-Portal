@@ -56,4 +56,6 @@ const activitySchema = new mongoose.Schema(
 
 activitySchema.index({ relatedType: 1, relatedId: 1, dateTime: -1 });
 
-module.exports = mongoose.model('Activity', activitySchema);
+module.exports =
+    mongoose.models.Activity ||
+    mongoose.model("Activity", activitySchema);

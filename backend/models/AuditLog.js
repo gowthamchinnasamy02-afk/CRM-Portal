@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Activity = require("../models/activity");
 
 const activitySchema = new mongoose.Schema(
     {
@@ -55,5 +56,3 @@ const activitySchema = new mongoose.Schema(
 );
 
 activitySchema.index({ relatedType: 1, relatedId: 1, dateTime: -1 });
-
-module.exports = mongoose.model('Activity', activitySchema);
