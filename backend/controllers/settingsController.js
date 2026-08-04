@@ -6,8 +6,8 @@ const getOrCreateSettings = async () => {
     if (!settings) {
         settings = await Settings.create({
             orgName: 'Default Organization',
-            currency: 'USD ($)',
-            timezone: 'America/New_York',
+            currency: 'INR (₹)',
+            timezone: 'India Standard Time (IST)',
             leadSource: ['Website', 'Referral', 'Cold Call', 'Social Media', 'Event', 'Advertisement', 'Other'],
             industries: ['Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Services', 'Other'],
             opportunityStages: [
